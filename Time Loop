@@ -1,0 +1,28 @@
+using System;
+
+namespace StuckInTimeLoop
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int X = int.Parse(Console.ReadLine());
+            int Y = 1;
+
+            if (X >= 1 && X <= 100)
+            {
+                while (Y<=X)
+                {
+                    Console.Write(Y + " Abracadabra");
+                    Console.WriteLine();
+                    Y = Y + 1;
+                }
+            }
+            else
+            {
+                Console.Write("Please enter an integer between 1 and 100!");
+            }
+
+        }
+    }
+}
