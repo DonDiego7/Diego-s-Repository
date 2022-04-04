@@ -1,0 +1,51 @@
+using System;
+
+namespace BelaApp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            String exec = Console.ReadLine();
+            int space = exec.IndexOf(' ');
+            int numhands = int.Parse(exec.Substring(0, space)) * 4;
+            char suit = exec[space + 1];
+            int ttlnum = 0;
+            for (int z = 0; z < numhands; z++)
+            {
+                String V = Console.ReadLine();
+                switch(V[0])
+                {
+                    case 'A':
+                        ttlnum += 11;
+                        break;
+                    case 'K':
+                        ttlnum += 4;
+                        break;
+                    case 'Q':
+                        ttlnum += 3;
+                        break;
+                    case 'J':
+                        if (V[1] == suit)
+                            ttlnum += 20;
+                        else
+                            ttlnum += 2;
+                    case 'T':
+                        ttlnum += 10;
+                        break;
+                    case '9':
+                        if (V[1] == suit)
+                            ttlnum += 14;
+                        break;
+                    default:
+                        break;
+
+                }
+            }
+
+
+
+            Console.WriteLine(ttlnum);
+        }
+    }
+}
