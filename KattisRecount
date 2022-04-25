@@ -32,7 +32,6 @@ namespace RecountKP
 
                 if (y != name.Length)
                 {
-                    //What this does is that it should show that the name is (Invalid;)
                     continue;
                 }
                 count++;
